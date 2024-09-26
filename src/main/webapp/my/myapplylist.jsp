@@ -39,6 +39,8 @@
 		<div class="mytitle">
 			<p>Help 지원</p>
 		</div>
+					<c:choose>
+            <c:when test="${not empty myApplyList}">
 		<div class="listcnt">
 			<p>총 ${myApplyList.size()}건</p>
 		</div>
@@ -61,7 +63,7 @@
 						<c:choose>
 							<c:when test="${apply.apply_status eq '지원완료'}">
 								<td>
-									<form action="myApplyList" method="POST" style="display: inline;">
+									<form action="myApplyList" method="POST" style="display: inline;" class="align-items_center">
 										<input type="hidden" name="apply_id" value="${apply.apply_id}" />
 										<button class="minibtn center" type="submit">취소하기</button>
 									</form>
@@ -75,6 +77,17 @@
 				</c:forEach>
 			</tbody>
 		</table>
+			            </c:when>
+            <c:otherwise>
+            <div align="center">
+                <br><br><br>
+                <img src="https://img.icons8.com/?size=100&id=nqFv5FwmrPCR&format=png">
+                <br><br>
+                <p>당신의 지원을 기다리고 있어요</p>
+                </div>
+            </c:otherwise>
+		</c:choose>
 	</div>
+	<br><br>
 </body>
 </html>

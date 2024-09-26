@@ -36,6 +36,8 @@ function submitForm() {
 	<div class="mytitle">
 		<p>Help 요청</p>
 	</div>
+			<c:choose>
+            <c:when test="${not empty myPostList}">
 	<div class="listcnt">
 		<p>총 ${myPostList.size() }건</p>
 	</div>
@@ -63,9 +65,20 @@ function submitForm() {
 			</form>
 		</tbody>
 	</table>
+	            </c:when>
+            <c:otherwise>
+            <div align="center">
+                <br><br><br>
+                <img src="https://img.icons8.com/?size=100&id=zU57htWohTud&format=png">
+                <br><br>
+                <p>등록한 Help 요청이 없습니다.</p>
+                </div>
+            </c:otherwise>
+		</c:choose>
 	<div>
 		<button type="button" onclick="submitForm()" class="minibtn">삭제하기</button>
 	</div>
 	</div>
+	<br><br>
 </body>
 </html>

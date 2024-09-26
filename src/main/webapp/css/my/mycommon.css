@@ -90,7 +90,7 @@ border-width: 0 0 1px;
 .user-content{ text-align: center; }
 
 /*postlist 체크박스*/
-.chkbox-style { accent-color: #03C75A; zoom:1.5;}
+.chkbox-style { accent-color: #03C75A; zoom:1.5; vertical-align: middle;}
 
 /*input 커서 여백*/
 .cursorpadding { padding-left:15px; }
@@ -148,4 +148,7 @@ border-width: 0 0 1px;
 
 .applytable-td1 { width:150px; white-space:no wrap; overflow: ellipsis; text-align: center;}
 .applytable-td2 { width:350px; white-space:no wrap; overflow: ellipsis; text-align: center;}
-.applytable-td3 { width:100px; white-space:no wrap; overflow: ellipsis; text-align: center;}
+.applytable-td3 { width:130px; white-space:no wrap; overflow: ellipsis; text-align: center;}
+
+/* .align-items_center {align-items: center; justify-content: center; text-align: center;} */
+.align-items_center {padding-left:20px;}
